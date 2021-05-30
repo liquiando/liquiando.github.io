@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <body>
+<div>
+	SCRIPT STARTED
+</div>
+<script>
+window.onload=function(){
+
+rnd_i = Math.floor(Math.random()*30);
+//console.log("RANDOM NR: " + rnd_i);
+
+const task = async () => {
+    for (var cnt_i = 0; cnt_i< 30; cnt_i++) {
+        window.open("https://www.bing.com/search?q="+getString(rnd_i),"_blank");
+        await new Promise(r => setTimeout(r, 10));
+        rnd_i++;
+    }
+}
+
+task();
+
+function getString(idx) {
+	var goods = [
+                 "playstation 5",
+                 "nintendo switch",
+                 "nintendo wii",
+                 "playstation 4",
+                 "Playstation 3",
+                 "macbook air m1 2020",
+                 "ipad 4 air",
+                 "apple ipad",
+                 "apple iphone",
+                 "microsoft surface",
+                 "lenovo thinkpad",
+                 "playstation 2",
+                 "playstation one",
+                 "xbox one s",
+                 "playstation 4 pro",
+                 "thinkad yoga",
+                 "huawei matebook pro",
+                 "logitech maus",
+                 "iphone 11",
+                 "magic mouse 2",
+                 "magic keyboard",
+                 "nintendo gameboy",
+                 "nintendo gamecube",
+                 "nintendo wii u",
+                 "apple iphone 11",
+                 "apple iphone 12",
+                 "bluetooth mouse",
+                 "raspberry pi 4",
+                 "raspberry pi 3",
+                 "iphone 12",
+                 "ipad mini",
+                 "mac mini",
+                 "acer aspire",
+                 "waschmaschine",
+                 "kaffeemaschine",
+                 "küche",
+                 "messerset",
+                 "geschirr",
+                 "kühlschrank",
+                 "trockner",
+                 "auto",
+                 "motorrad",
+                 "fahrrad",
+                 "tigerbox",
+                 "barbie",
+                 "switch spiele",
+                 "playstation spiele",
+                 "playmobil",
+                 "lego",
+"apple tv",
+                 "playmobil city life",
+                 "lego technik",
+                 "homepod mini",
+                 "panasonic lumix",
+                 "xiaomi mi 10t pro",
+                 "amazon echo dot",
+                 "sennheiser cx 400 bt",
+                 "airpods",
+                 "airpods pro",
+                 "airpods max",
+                 "realme 7 5g",
+                 "garmin venu",
+                 "apple watch",
+                 "huawei watch",
+                 "xbox series x"
+	]
+    var doing = [
+                  "kaufen",
+                  "verkaufen",
+                  "reparieren",
+                  "gebraucht kaufen",
+                  "gebraucht verkaufen",
+                  "neu kaufen",
+                  "Preis vergleichen",
+                  "günstigster Preis",
+                  "online verkaufen",
+                  "online kaufen"
+    ]
+	return goods[idx]+" "+doing[Math.floor(Math.random()*10)];
+}
+}
+</script>
+</body>
+</html>
